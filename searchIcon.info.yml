@@ -1,0 +1,6 @@
+name: Search Icon
+description: This module replaces search value by an icon.
+
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
