@@ -1,16 +1,10 @@
 <?php
 
 /*
- * Implementation of hook_form_alter()
+ * Implementation of hook_form_FORM_ID_alter()
  */
 
-function searchIcon_form_alter(&$form, &$form_state, $form_id) {
-	if ($form_id == 'search_block_form') {
-		$form['actions']['submit']['#value']= 'TESTSEARCH';
-	}
-/*
-	if ($form_id == 'search_form') {
-		$form['basic']['submit']['#value']= 'SEARCHTEST';
-	}
-*/
+function searchIcon_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+	$form['actions']['submit']['#value']= "🔍";
+	$form['#attached']['library'][] = 'searchIcon/searchIconLibrary';
 }
